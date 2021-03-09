@@ -1,0 +1,10 @@
+{
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "component": {
+      "description": "Regrid custom component.",
+      "factory": "./component/index#regridComponent",
+      "schema": "./component/schema.json"
+    }
+  }
+}
