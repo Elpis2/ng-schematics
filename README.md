@@ -1,21 +1,20 @@
-# Getting Started With Regrid Schematics
+# Getting Started With Elpis2 Angular Schematics
 
-This repository is a basic Schematic implementation of customized Regrid Schematics
+This repository is an implementation of customized Elpis2 Angular Schematics
 
 ### Installation
 
 ```bash
-yarn add --dev regrid-schematics
+yarn add --dev @elpis2/ng-schematics
 ```
 
 ### Available Schematics
 
-`component` - A customized Regrid component with properly formatted .spec.ts and .ts files
+`component` - A customized Elpis2 component with properly formatted .spec.ts and .ts files
 
 ### Usage
 
 ```bash
-ng generate regrid-schematics:component 'line chart'
+ng generate @elpis2/ng-schematics:component 'line chart'
 ```
 This will give us a new component in /src/app/line-chart.
-
