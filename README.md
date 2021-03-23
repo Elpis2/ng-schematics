@@ -14,12 +14,11 @@ yarn add --dev @elpis2/ng-schematics
 * `class` - A customized Elpis2 class with properly formatted .spec.ts and .ts files
 * `component` - A customized Elpis2 component with properly formatted .html, .styl, .spec.ts, and .ts files
 * `directive` - A customized Elpis2 directive with properly formatted .spec.ts and .ts files
-* `component` - A customized Elpis2 enum with properly formatted .ts file
+* `enum` - A customized Elpis2 enum with properly formatted .ts file
 * `guard` - A customized Elpis2 guard with properly formatted .spec.ts and .ts files
 * `interceptor` - A customized Elpis2 interceptor with properly formatted .spec.ts and .ts files
 * `interface` - A customized Elpis2 interface with properly formatted .ts file
 * `module` - A customized Elpis2 module with properly formatted .spec.ts and .ts files
-* `pipe` - A customized Elpis2 pipe with properly formatted .ts file
 * `service` - A customized Elpis2 service with properly formatted .spec.ts and .ts files
 
 #### Custom schematics
