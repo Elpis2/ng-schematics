@@ -16,7 +16,7 @@ import { buildDefaultPath } from '@schematics/angular/utility/project';
 
 import { Schema } from './schema';
 
-export function regridComponent(_options: Schema): Rule {
+export function regridInterceptor(_options: Schema): Rule {
 
   return (tree: Tree, _context: SchematicContext) => {
     const workspaceConfigBuffer = tree.read('angular.json');
@@ -39,6 +39,7 @@ export function regridComponent(_options: Schema): Rule {
       template({
                  ..._options,
                  ...strings,
+                 'if-flat': (s: any) => _options.flat ? '' : s,
                  classify,
                  name,
                }),

@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "RegridGuard",
+  "title": "Regrid Guard Options Schema",
+  "type": "object",
+  "description": "Generates a new, generic route guard definition in the given or default project.",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the new route guard.",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "What name would you like to use for the guard?"
+    },
+    "project": {
+      "type": "string",
+      "description": "Generate in specific Angular CLI workspace project"
+    },
+    "implements": {
+      "type": "array",
+      "description": "Specifies which interfaces to implement.",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": {
+        "enum": [
+          "CanActivate",
+          "CanActivateChild",
+          "CanDeactivate",
+          "CanLoad"
+        ],
+        "type": "string"
+      },
+      "default": [
+        "CanActivate"
+      ],
+      "x-prompt": "Which interfaces would you like to implement?"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

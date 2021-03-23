@@ -1,10 +1,55 @@
 {
   "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
   "schematics": {
+    "class": {
+      "description": "Regrid custom class.",
+      "factory": "./class/index#regridClass",
+      "schema": "./class/schema.json"
+    },
     "component": {
       "description": "Regrid custom component.",
       "factory": "./component/index#regridComponent",
       "schema": "./component/schema.json"
+    },
+    "directive": {
+      "description": "Regrid custom directive.",
+      "factory": "./directive/index#regridDirective",
+      "schema": "./directive/schema.json"
+    },
+    "enum": {
+      "description": "Regrid custom enum.",
+      "factory": "./enum/index#regridEnum",
+      "schema": "./enum/schema.json"
+    },
+    "guard": {
+      "description": "Regrid custom guard.",
+      "factory": "./guard/index#regridGuard",
+      "schema": "./guard/schema.json"
+    },
+    "interceptor": {
+      "description": "Regrid custom interceptor.",
+      "factory": "./interceptor/index#regridInterceptor",
+      "schema": "./interceptor/schema.json"
+    },
+    "interface": {
+      "description": "Regrid custom interface.",
+      "factory": "./interface/index#regridInterface",
+      "schema": "./interface/schema.json"
+    },
+    "module": {
+      "description": "Regrid custom module.",
+      "factory": "./module/index#regridModule",
+      "schema": "./module/schema.json"
+    },
+    "service": {
+      "description": "Regrid custom service.",
+      "factory": "./service/index#regridService",
+      "schema": "./service/schema.json"
+    },
+    "lazy-module": {
+      "description": "Regrid lazy-module.",
+      "factory": "./lazy-module/index#regridLazyModule",
+      "schema": "./lazy-module/schema.json"
     }
   }
 }

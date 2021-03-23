@@ -6,10 +6,10 @@ import * as path               from 'path';
 const collectionPath = path.join(__dirname, '../collection.json');
 
 
-describe('component', () => {
+describe('enum', () => {
   it('works', async () => {
     const runner = new SchematicTestRunner('schematics', collectionPath);
-    const tree   = await runner.runSchematicAsync('component', {}, Tree.empty()).toPromise();
+    const tree   = await runner.runSchematicAsync('enum', {}, Tree.empty()).toPromise();
 
     expect(tree.files).toEqual([]);
   });

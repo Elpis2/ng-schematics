@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "RegridService",
+  "title": "Regrid Service Options Schema",
+  "description": "Regrid Service",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the service",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "What would you like to name this service?"
+    },
+    "project": {
+      "type": "string",
+      "description": "Generate in specific Angular CLI workspace project"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

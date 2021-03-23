@@ -1,12 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.regridComponent = void 0;
+exports.regridInterceptor = void 0;
 const core_1 = require("@angular-devkit/core");
 const strings_1 = require("@angular-devkit/core/src/utils/strings");
 const schematics_1 = require("@angular-devkit/schematics");
 const parse_name_1 = require("@schematics/angular/utility/parse-name");
 const project_1 = require("@schematics/angular/utility/project");
-function regridComponent(_options) {
+function regridInterceptor(_options) {
     return (tree, _context) => {
         const workspaceConfigBuffer = tree.read('angular.json');
         if (!workspaceConfigBuffer) {
@@ -20,12 +20,12 @@ function regridComponent(_options) {
         const { name, path, } = parsedPath;
         const sourceTemplates = schematics_1.url('./files');
         const sourceParameterizedTemplates = schematics_1.apply(sourceTemplates, [
-            schematics_1.template(Object.assign(Object.assign(Object.assign({}, _options), core_1.strings), { classify: strings_1.classify,
+            schematics_1.template(Object.assign(Object.assign(Object.assign({}, _options), core_1.strings), { 'if-flat': (s) => _options.flat ? '' : s, classify: strings_1.classify,
                 name })),
             schematics_1.move(path),
         ]);
         return schematics_1.mergeWith(sourceParameterizedTemplates)(tree, _context);
     };
 }
-exports.regridComponent = regridComponent;
+exports.regridInterceptor = regridInterceptor;
 //# sourceMappingURL=index.js.map

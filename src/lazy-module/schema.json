@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "RegridSuperCombo",
+  "title": "Regrid Super Combo Options Schema",
+  "description": "Regrid Super Combo",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the super combo",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "What would you like to name this super combo?"
+    },
+    "project": {
+      "type": "string",
+      "description": "Generate in specific Angular CLI workspace project"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

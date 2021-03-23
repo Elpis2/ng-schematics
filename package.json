@@ -1,6 +1,6 @@
 {
   "name": "@elpis2/ng-schematics",
-  "version": "1.0.0",
+  "version": "1.1.6",
   "description": "Elpis2 Angular Schematics",
   "scripts": {
     "build": "tsc -p tsconfig.json",
@@ -17,6 +17,7 @@
     "@angular-devkit/core": "^11.2.2",
     "@angular-devkit/schematics": "^11.2.2",
     "@schematics/angular": "9.1.0",
+    "camelcase": "^6.2.0",
     "typescript": "~4.1.2"
   },
   "devDependencies": {

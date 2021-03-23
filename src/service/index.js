@@ -1,12 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.regridComponent = void 0;
+exports.regridService = void 0;
 const core_1 = require("@angular-devkit/core");
 const strings_1 = require("@angular-devkit/core/src/utils/strings");
 const schematics_1 = require("@angular-devkit/schematics");
 const parse_name_1 = require("@schematics/angular/utility/parse-name");
 const project_1 = require("@schematics/angular/utility/project");
-function regridComponent(_options) {
+function regridService(_options) {
     return (tree, _context) => {
         const workspaceConfigBuffer = tree.read('angular.json');
         if (!workspaceConfigBuffer) {
@@ -27,5 +27,5 @@ function regridComponent(_options) {
         return schematics_1.mergeWith(sourceParameterizedTemplates)(tree, _context);
     };
 }
-exports.regridComponent = regridComponent;
+exports.regridService = regridService;
 //# sourceMappingURL=index.js.map

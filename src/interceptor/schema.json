@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "RegridInterceptor",
+  "title": "Regrid Options Schema",
+  "type": "object",
+  "description": "Creates a new, Regrid interceptor definition in the given or default project.",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the interceptor.",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "What name would you like to use for the interceptor?"
+    },
+    "project": {
+      "type": "string",
+      "description": "Generate in specific Angular CLI workspace project"
+    },
+    "flat": {
+      "type": "boolean",
+      "default": true,
+      "description": "When true (the default), creates files at the top level of the project."
+    }
+  },
+  "required": ["name"]
+}

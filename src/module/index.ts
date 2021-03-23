@@ -16,7 +16,7 @@ import { buildDefaultPath } from '@schematics/angular/utility/project';
 
 import { Schema } from './schema';
 
-export function regridComponent(_options: Schema): Rule {
+export function regridModule(_options: Schema): Rule {
 
   return (tree: Tree, _context: SchematicContext) => {
     const workspaceConfigBuffer = tree.read('angular.json');

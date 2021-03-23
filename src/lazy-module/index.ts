@@ -1,5 +1,6 @@
 import { strings }          from '@angular-devkit/core';
 import { classify }         from '@angular-devkit/core/src/utils/strings';
+import * as camelCase       from 'camelcase'
 import {
   apply,
   mergeWith,
@@ -16,7 +17,7 @@ import { buildDefaultPath } from '@schematics/angular/utility/project';
 
 import { Schema } from './schema';
 
-export function regridComponent(_options: Schema): Rule {
+export function regridLazyModule(_options: Schema): Rule {
 
   return (tree: Tree, _context: SchematicContext) => {
     const workspaceConfigBuffer = tree.read('angular.json');
@@ -40,6 +41,7 @@ export function regridComponent(_options: Schema): Rule {
                  ..._options,
                  ...strings,
                  classify,
+                 camelCase,
                  name,
                }),
       move(path),

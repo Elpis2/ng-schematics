@@ -1,12 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.regridComponent = void 0;
+exports.regridLazyModule = void 0;
 const core_1 = require("@angular-devkit/core");
 const strings_1 = require("@angular-devkit/core/src/utils/strings");
+const camelCase = require("camelcase");
 const schematics_1 = require("@angular-devkit/schematics");
 const parse_name_1 = require("@schematics/angular/utility/parse-name");
 const project_1 = require("@schematics/angular/utility/project");
-function regridComponent(_options) {
+function regridLazyModule(_options) {
     return (tree, _context) => {
         const workspaceConfigBuffer = tree.read('angular.json');
         if (!workspaceConfigBuffer) {
@@ -21,11 +22,12 @@ function regridComponent(_options) {
         const sourceTemplates = schematics_1.url('./files');
         const sourceParameterizedTemplates = schematics_1.apply(sourceTemplates, [
             schematics_1.template(Object.assign(Object.assign(Object.assign({}, _options), core_1.strings), { classify: strings_1.classify,
+                camelCase,
                 name })),
             schematics_1.move(path),
         ]);
         return schematics_1.mergeWith(sourceParameterizedTemplates)(tree, _context);
     };
 }
-exports.regridComponent = regridComponent;
+exports.regridLazyModule = regridLazyModule;
 //# sourceMappingURL=index.js.map
