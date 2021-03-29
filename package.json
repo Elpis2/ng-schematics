@@ -1,6 +1,6 @@
 {
   "name": "@elpis2/ng-schematics",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "description": "Elpis2 Angular Schematics",
   "scripts": {
     "build": "tsc -p tsconfig.json",
