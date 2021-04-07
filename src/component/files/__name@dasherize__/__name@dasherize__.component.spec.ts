@@ -10,6 +10,7 @@ describe('<%= classify(name) %>Component', (): void => {
   let component: <%= classify(name) %>Component;
   let fixture: ComponentFixture<<%= classify(name) %>Component>;
 
+  // tslint:disable-next-line:no-any
   beforeEach(async (): Promise<any> => {
     await TestBed.configureTestingModule(
       {
